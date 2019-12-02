@@ -1,0 +1,83 @@
+body {
+  background-color: blue;
+}
+
+#container {
+  background-color: darkred;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: auto;
+  margin: auto;
+}
+
+.small {
+  background-color: yellow;
+  width: 400px;
+  display: inline-block;
+}
+
+.medium {
+  background-color: aqua;
+  width: 400px;
+  display: inline-block;
+  min-width: auto;
+}
+
+.large {
+  background-color: bisque;
+  width: 400px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 300px) {
+  body {
+    background-color: red;
+  }
+  body .small {
+    font-size: small;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 301px) and (max-width: 768px) {
+  body {
+    background-color: lime;
+  }
+  body .medium {
+    font-size: medium;
+    display: inline-block;
+  }
+  body #small {
+    width: 66%;
+  }
+  body #medium {
+    width: 33%;
+  }
+  body #large {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  body {
+    background-color: blue;
+  }
+  body .large {
+    font-size: large;
+    display: inline-block;
+  }
+  body #container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  body #small, body #medium, body #large {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    float: left;
+  }
+}
+
+/*# sourceMappingURL=styling.css.map */
